@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>velocistaEdu: Fichero Fuente /home/emigjul/Documents/PersonalProjects/git/velocistaEdu/src/velocistaEdu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">velocistaEdu
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">velocistaEdu.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef velocistaEdu_h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define velocistaEdu_h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Arduino.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">enum</span> LEDS {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   LED1 = 9,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   LED2 = 10</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVelocistaEdu.html">VelocistaEdu</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a25cef84df3fb113c7605ef584acc4791">inicializar</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a310d6308d71269f0ab368df057bed863">establecerVelocidad</a>(<span class="keywordtype">int</span> velocidadIzquierda, <span class="keywordtype">int</span> velocidadDerecha);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code" href="classVelocistaEdu.html#ac7a4e6998613c3a4bc6932ac36cbabd5">botonLiberado</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classVelocistaEdu.html#a917c5a5db3464f24ff0f1d088db20c1f">obtenerMedidaLinea</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">obtenerSensoresLinea</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classVelocistaEdu.html#ae3107ce76e04c78e7294bef7c14c544a">s</a>[4]);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a2a8437ea728a209140eff908bdcd2ae0">actualizarEncoders</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">obtenerCuentaEncoders</a>(<span class="keywordtype">int</span> &amp;encoderIzquierdo, <span class="keywordtype">int</span> &amp;encoderDerecho);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">resetearCuentaEncoders</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classVelocistaEdu.html#a903ad991b6ed5e9f92e92ee03ae9a73d">obtenerTensionBateria</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d">encenderLed</a>(LEDS led);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a00c86220166c03bc3066bd6d1368c6b1">apagarLed</a>(LEDS led);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a48796ee6f8f1c128ab01590b1bce3b15">  111</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code" href="classVelocistaEdu.html#a48796ee6f8f1c128ab01590b1bce3b15">estadoEncoderDerecho</a>; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a729e902ea3de6fefc0dcade05ffbadd2">  112</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code" href="classVelocistaEdu.html#a729e902ea3de6fefc0dcade05ffbadd2">estadoEncoderIzquierdo</a>; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#ab4189c2ebbfd422b08f378fb7682777b">  113</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classVelocistaEdu.html#ab4189c2ebbfd422b08f378fb7682777b">cuentaEncoderDerecho</a>; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a92b0bb2c8ffc67ecb71fc725f03157b8">  114</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classVelocistaEdu.html#a92b0bb2c8ffc67ecb71fc725f03157b8">cuentaEncoderIzquierdo</a>; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a8a33ff5b30caff9c7a368006ea9dcd38">  115</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code" href="classVelocistaEdu.html#a8a33ff5b30caff9c7a368006ea9dcd38">esperandoSoltarBoton</a>; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#ae3107ce76e04c78e7294bef7c14c544a">  116</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s[4]; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d">  122</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d">VelocistaEdu::encenderLed</a>(LEDS led)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  digitalWrite(led, HIGH);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a00c86220166c03bc3066bd6d1368c6b1">  127</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a00c86220166c03bc3066bd6d1368c6b1">VelocistaEdu::apagarLed</a>(LEDS led)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  digitalWrite(led, LOW);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">  132</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">VelocistaEdu::obtenerSensoresLinea</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s[4])</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  memcpy(s, <a class="code" href="classVelocistaEdu.html#ae3107ce76e04c78e7294bef7c14c544a">VelocistaEdu::s</a>, 4 * <span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classVelocistaEdu_html_aed23e7a0cc9fcbcaa09edcef6bd76a76"><div class="ttname"><a href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">VelocistaEdu::obtenerCuentaEncoders</a></div><div class="ttdeci">static void obtenerCuentaEncoders(int &amp;encoderIzquierdo, int &amp;encoderDerecho)</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:65</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a2a8437ea728a209140eff908bdcd2ae0"><div class="ttname"><a href="classVelocistaEdu.html#a2a8437ea728a209140eff908bdcd2ae0">VelocistaEdu::actualizarEncoders</a></div><div class="ttdeci">static void actualizarEncoders()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:51</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a25cef84df3fb113c7605ef584acc4791"><div class="ttname"><a href="classVelocistaEdu.html#a25cef84df3fb113c7605ef584acc4791">VelocistaEdu::inicializar</a></div><div class="ttdeci">static void inicializar()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:166</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a584073fb623a16c9286c20273431d27a"><div class="ttname"><a href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">VelocistaEdu::obtenerSensoresLinea</a></div><div class="ttdeci">static void obtenerSensoresLinea(unsigned int s[4])</div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:132</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a48796ee6f8f1c128ab01590b1bce3b15"><div class="ttname"><a href="classVelocistaEdu.html#a48796ee6f8f1c128ab01590b1bce3b15">VelocistaEdu::estadoEncoderDerecho</a></div><div class="ttdeci">static boolean estadoEncoderDerecho</div><div class="ttdoc">Guarda el ultimo estado conocido del pin del encoder derecho. </div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:111</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a917c5a5db3464f24ff0f1d088db20c1f"><div class="ttname"><a href="classVelocistaEdu.html#a917c5a5db3464f24ff0f1d088db20c1f">VelocistaEdu::obtenerMedidaLinea</a></div><div class="ttdeci">static int obtenerMedidaLinea()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:122</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a729e902ea3de6fefc0dcade05ffbadd2"><div class="ttname"><a href="classVelocistaEdu.html#a729e902ea3de6fefc0dcade05ffbadd2">VelocistaEdu::estadoEncoderIzquierdo</a></div><div class="ttdeci">static boolean estadoEncoderIzquierdo</div><div class="ttdoc">Guarda el ultimo estado conocido del pin del encoder izquierdo. </div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:112</div></div>
+<div class="ttc" id="classVelocistaEdu_html_ab4189c2ebbfd422b08f378fb7682777b"><div class="ttname"><a href="classVelocistaEdu.html#ab4189c2ebbfd422b08f378fb7682777b">VelocistaEdu::cuentaEncoderDerecho</a></div><div class="ttdeci">static unsigned int cuentaEncoderDerecho</div><div class="ttdoc">Guarda la cuenta del encoder derecho. </div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:113</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a7b51e9c36a2f5d57e763904b38c79e3d"><div class="ttname"><a href="classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d">VelocistaEdu::encenderLed</a></div><div class="ttdeci">static void encenderLed(LEDS led)</div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:122</div></div>
+<div class="ttc" id="classVelocistaEdu_html_ae3107ce76e04c78e7294bef7c14c544a"><div class="ttname"><a href="classVelocistaEdu.html#ae3107ce76e04c78e7294bef7c14c544a">VelocistaEdu::s</a></div><div class="ttdeci">static unsigned int s[4]</div><div class="ttdoc">Guarda el valor de los sensores infrarrojos. </div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:116</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a8a33ff5b30caff9c7a368006ea9dcd38"><div class="ttname"><a href="classVelocistaEdu.html#a8a33ff5b30caff9c7a368006ea9dcd38">VelocistaEdu::esperandoSoltarBoton</a></div><div class="ttdeci">static boolean esperandoSoltarBoton</div><div class="ttdoc">Permite controlar el momento en el que se libera el boton. </div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:115</div></div>
+<div class="ttc" id="classVelocistaEdu_html"><div class="ttname"><a href="classVelocistaEdu.html">VelocistaEdu</a></div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:21</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a903ad991b6ed5e9f92e92ee03ae9a73d"><div class="ttname"><a href="classVelocistaEdu.html#a903ad991b6ed5e9f92e92ee03ae9a73d">VelocistaEdu::obtenerTensionBateria</a></div><div class="ttdeci">static int obtenerTensionBateria()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:77</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a00c86220166c03bc3066bd6d1368c6b1"><div class="ttname"><a href="classVelocistaEdu.html#a00c86220166c03bc3066bd6d1368c6b1">VelocistaEdu::apagarLed</a></div><div class="ttdeci">static void apagarLed(LEDS led)</div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:127</div></div>
+<div class="ttc" id="classVelocistaEdu_html_ac8cc7494181803a62e6c018688360af2"><div class="ttname"><a href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">VelocistaEdu::actualizarSensoresLinea</a></div><div class="ttdeci">static void actualizarSensoresLinea()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:114</div></div>
+<div class="ttc" id="classVelocistaEdu_html_ac7a4e6998613c3a4bc6932ac36cbabd5"><div class="ttname"><a href="classVelocistaEdu.html#ac7a4e6998613c3a4bc6932ac36cbabd5">VelocistaEdu::botonLiberado</a></div><div class="ttdeci">static boolean botonLiberado()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:34</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a61d5fd4eafd7353e0de1cc404e52287e"><div class="ttname"><a href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">VelocistaEdu::resetearCuentaEncoders</a></div><div class="ttdeci">static void resetearCuentaEncoders()</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:71</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a92b0bb2c8ffc67ecb71fc725f03157b8"><div class="ttname"><a href="classVelocistaEdu.html#a92b0bb2c8ffc67ecb71fc725f03157b8">VelocistaEdu::cuentaEncoderIzquierdo</a></div><div class="ttdeci">static unsigned int cuentaEncoderIzquierdo</div><div class="ttdoc">Guarda la cuenta del encoder izquierdo. </div><div class="ttdef"><b>Definition:</b> velocistaEdu.h:114</div></div>
+<div class="ttc" id="classVelocistaEdu_html_a310d6308d71269f0ab368df057bed863"><div class="ttname"><a href="classVelocistaEdu.html#a310d6308d71269f0ab368df057bed863">VelocistaEdu::establecerVelocidad</a></div><div class="ttdeci">static void establecerVelocidad(int velocidadIzquierda, int velocidadDerecha)</div><div class="ttdef"><b>Definition:</b> velocistaEdu.cpp:84</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Martes, 17 de Noviembre de 2015 14:13:52 para velocistaEdu por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
