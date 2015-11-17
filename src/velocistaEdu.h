@@ -40,7 +40,7 @@ class VelocistaEdu
     static boolean botonLiberado();
 
 /**
-  * Funcion estatica que actualiza las variables internas que guardan los valores de los sensores infrarojos
+  * Funcion estatica que actualiza las variables internas que guardan los valores de los sensores infrarrojos
   * @see obtenerMedidaLinea()
   * @see obtenerSensoresLinea()
   */
@@ -113,7 +113,7 @@ class VelocistaEdu
     static unsigned int cuentaEncoderDerecho; //!< Guarda la cuenta del encoder derecho
     static unsigned int cuentaEncoderIzquierdo; //!< Guarda la cuenta del encoder izquierdo
     static boolean esperandoSoltarBoton; //!< Permite controlar el momento en el que se libera el boton
-    static unsigned int s[4]; //!< Guarda el valor de los sensores infrarojos
+    static unsigned int s[4]; //!< Guarda el valor de los sensores infrarrojos
 
   private:
     static const uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN;

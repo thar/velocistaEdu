@@ -1,0 +1,36 @@
+/*! \mainpage Índice de velocistaEdu
+ *
+ * \section intro_sec Introducción
+ *
+ * El kit de velocistaEdu es un kit desarrollado por Vicent Colomar y Andreu Marsal para falicitar el acceso a los componentes necesarios para montar un robot siguelineas
+ * a cualquier persona interesada en construir su primer robot siguelineas competitivo.
+ * El kit incluye un shield para una placa Arduino Nano con el driver de motores, dos leds y un buzzer y los pines necesarios para conectar 4 sensores de infrarrojos, un pin de encoder por motor
+ * y los pines de I2C y puerto serie expuestos.
+ * El kit tambien incluye la placa para montar los sensores infrarrojos que detectarán la linea del suelo y las placas para añadir el encoder a los motores.
+ *
+ * Con esta configuración se pretende que el robot sea de un facil montaje y sencillo de programar, pero que tenga la posibilidad de hacer desarrollos más complejos segun se va avanzando en el
+ * aprendizaje de la robótica.
+ *
+ * La librería que se propone es solo una pequeña ayuda para que los primeros pasos con el kit sean lo más sencillos posibles.
+ *
+ * En la pagina oficial de la liga nacional de robotica de competición (http://lnrc.es/) se puede encontrar más información sobre los eventos que se desarrollan a lo largo de la geografía
+ * española tanto para estudiantes como para gente con conocimientos más avanzados en los que se ponen a prueba los robots construidos y programados por los concursasntes.
+ * En la sección de estudiantes se puede encontrar más información sobre los kits disponibles con vídeos sobre su montaje.
+ *
+ * \section install_sec Instalación
+ *
+ * Copiar la carpeta completa del proyecto en la carpeta de librerías que crea Arduino.
+ * Si el espacio en el disco donde se tiene que copiar la librería es muy escaso se pueden eliminar las carpetas "examples", "doc" y ".git"
+ *
+ * \section examples Ejemplos
+ *
+ * La librería incluye unos ejemplos de uso sencillos. Una vez instalada la librería los ejemplos deberían aparecer en la sección de ejemplos del IDE Arduino
+ * Los ejemplos disponibles ahora mismo son:
+ *   -  lecturaBoton: Muestra un mensaje por el puerto serie cada vez que se suelta el botón de la placa principal del kit
+ *   -  lecturaEncoders: Muestra por el puerto serie la cuenta de los encoders. Según se muevan las ruedas la cuenta debería incrementarse. Siempre contará hacia arriba,
+ *         ya que el encoder en cuadratura no está disponible
+ *   -  lecturaLeds: Muestra por el puerto serie la lectura analógica de los sensores infrarrojos
+ *   -  parpadeoLeds: Hace que los leds de la placa del kit parpadeen. Solo uno deberia estar encendido en cada momento
+ *   -  siguelineas: Implementación de un control PD para seguir una linea negra sobre un fondo blanco. Los paramentros del PD no están optimizados
+ *
+ */

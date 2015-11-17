@@ -2,7 +2,7 @@
 Libreria para placa de Kit de Robot Velocista Educacion para Arduino.
 
 El kit de velocistas incluye una placa de control para 2 motores DC que pueden integrar un pin de encoder.
-Tambien se incluye una placa con 4 sensores infrarojos para detectar una linea de 2cm en el suelo.
+Tambien se incluye una placa con 4 sensores infrarrojos para detectar una linea de 2cm en el suelo.
 La libreria proporciona las funciones para inicializar los pines usados y poder leer/actuar sobre
 los diferentes sensores/actuadores incluidos.
 
