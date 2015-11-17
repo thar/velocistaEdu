@@ -46,7 +46,7 @@ boolean VelocistaEdu::botonLiberado()
 /*
  * Este codigo comprueba si el pin asociado al encoder ha cambiado de valor.
  * Cada vez que cambia se aumenta la cuenta del encoder en uno.
- * Esa cuenta se guarda en las variables encDer y encIzq
+ * Esa cuenta se guarda en las variables cuentaEncoderDerecho y cuentaEncoderIzquierdo
  */
 void VelocistaEdu::actualizarEncoders()
 {
@@ -62,10 +62,6 @@ void VelocistaEdu::actualizarEncoders()
   }
 }
 
-/*
- * Se queda guardado en las variables que se le pasan a la funcion los valores mas recientes
- * de la cuenta de los encoders
- */
 void VelocistaEdu::obtenerCuentaEncoders(int &encoderIzquierdo, int &encoderDerecho)
 {
   encoderIzquierdo = VelocistaEdu::cuentaEncoderIzquierdo;
@@ -78,9 +74,6 @@ void VelocistaEdu::resetearCuentaEncoders()
   VelocistaEdu::cuentaEncoderIzquierdo = 0;
 }
 
-/*
- * La siguiente funcion devuelve la tension de la bateria en mV
- */
 int VelocistaEdu::obtenerTensionBateria()
 {
   int bateria = analogRead(A6);
@@ -88,15 +81,14 @@ int VelocistaEdu::obtenerTensionBateria()
   return bateria;
 }
 
-/*
- * Cuando se llama a la siguiente funcion se enviarian los valores guardados en pwmDer y pwmIzq a los motores
- */
 void VelocistaEdu::establecerVelocidad(int velocidadIzquierda, int velocidadDerecha) {
+  //Control de direccion para el motor derecho. Si el motor va al reves de lo esperado cambiar el LOW por HIGH y HIGH por LOW
   if (velocidadDerecha >= 0) {
     digitalWrite(VelocistaEdu::M_DER_DIR_PIN, LOW);
   } else {
     digitalWrite(VelocistaEdu::M_DER_DIR_PIN, HIGH);
   }
+  //Ajuste de la velocidad maxima y minima para el motor derecho
   if (velocidadDerecha > 255) {
     velocidadDerecha = 255;
   } else if (velocidadDerecha < -255) {
@@ -104,11 +96,13 @@ void VelocistaEdu::establecerVelocidad(int velocidadIzquierda, int velocidadDere
   }
   analogWrite(VelocistaEdu::M_DER_PWM_PIN, abs(velocidadDerecha));
   
+  //Control de direccion para el motor izquierdo. Si el motor va al reves de lo esperado cambiar el LOW por HIGH y HIGH por LOW
   if (velocidadIzquierda >= 0) {
     digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, LOW);
   } else {
     digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, HIGH);
   }
+  //Ajuste de la velocidad maxima y minima para el motor izquierdo
   if (velocidadIzquierda > 255) {
     velocidadIzquierda = 255;
   } else if (velocidadIzquierda < -255) {
@@ -125,11 +119,6 @@ void VelocistaEdu::actualizarSensoresLinea()
   VelocistaEdu::s[3] = analogRead(A3); //posicion 3
 }
 
-/*
- * La siguiente funcion devuelve la posicion de la linea entre -30 y 30
- * Es solo un ejemplo rapido y sencillo de entender y programar
- * Hay mejores formas de hacerlo (mirar por ejemplo la libreria de Pololu para su sensor)
- */
 int VelocistaEdu::obtenerMedidaLinea()
 {
   /*
@@ -172,7 +161,6 @@ int VelocistaEdu::obtenerMedidaLinea()
 }
 
 /*
- * Esta funcion inicializa los elementos de la placa de velocistaEdu
  * TODO: Buzzer e IR
  */
 void VelocistaEdu::inicializar() {

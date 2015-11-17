@@ -10,6 +10,9 @@ Para usar la libreria hay que poner el contenido del repositorio en la carpeta "
 Dentro de la carpeta "examples" existen proyectos de Arduino que usan algunas de las funciones de la
 libreria y se pueden usar como ejemplo.
 
+Dentro de la carpeta "doc" se puede encontrar la documentacion de la libreria en formato doxygen.
+Para verla hay que abrir el fichero "doc/html/index.html" en un navegador
+
 Para mas informacion sobre la libreria acude a la pagina de la liga de robots.
 http://lnrc.es/estudiantes
 
