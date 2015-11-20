@@ -7,6 +7,7 @@ const uint8_t VelocistaEdu::M_DER_DIR_PIN = 5;
 const uint8_t VelocistaEdu::M_DER_PWM_PIN = 6;
 const uint8_t VelocistaEdu::ENC_IZQ_PIN = 7;
 const uint8_t VelocistaEdu::ENC_DER_PIN = 8;
+const uint8_t VelocistaEdu::BUZZ = 12;
 
 boolean VelocistaEdu::estadoEncoderDerecho = 0;
 boolean VelocistaEdu::estadoEncoderIzquierdo = 0;
@@ -74,10 +75,10 @@ void VelocistaEdu::resetearCuentaEncoders()
   VelocistaEdu::cuentaEncoderIzquierdo = 0;
 }
 
-int VelocistaEdu::obtenerTensionBateria()
+unsigned int VelocistaEdu::obtenerTensionBateria()
 {
-  int bateria = analogRead(A6);
-  //Hay que ajustar el valor sabiendo el divisor resistivo que hay en la entrada del pin
+  unsigned int bateria = analogRead(A6);
+  bateria = bateria * 41 / 5;
   return bateria;
 }
 
@@ -149,12 +150,12 @@ int VelocistaEdu::obtenerMedidaLinea()
   {
     posicion = (-3 * VelocistaEdu::s[0]) + (-1 * VelocistaEdu::s[1]) + (1 * VelocistaEdu::s[2]) + (3 * VelocistaEdu::s[3]);
     posicionAnterior = posicion;
-    //VelocistaEdu::apagarLed(LED1); //Descomentar para que se apague el LED1 cuando se encuentra la linea
+    //VelocistaEdu::apagarLed(ROJO); //Descomentar para que se apague el ROJO cuando se encuentra la linea
   }
   else
   {
     posicion = posicionAnterior * 11 / 10; //Esto sirve para dar un valor un poco mayor al extremo cuando perdemos la linea
-    //VelocistaEdu::encenderLed(LED1); //Descomentar para que se encienda el LED1 si se pierde la linea
+    //VelocistaEdu::encenderLed(ROJO); //Descomentar para que se encienda el ROJO si se pierde la linea
   }
   //NOTA: Aqui divido por 100 para tener valores entre -30 y 30, siendo esto una resolucion de unos 0.6mm, pero es posible que otro valor sea mejor
   return posicion/100;
@@ -182,8 +183,13 @@ void VelocistaEdu::inicializar() {
   /*
    * Los pines de los leds como salida
    */
-  pinMode(LED1, OUTPUT);
-  pinMode(LED2, OUTPUT);
+  pinMode(ROJO, OUTPUT);
+  pinMode(VERDE, OUTPUT);
+
+  /*
+   * El pin del buzzer como salida
+   */
+  pinMode(VelocistaEdu::BUZZ, OUTPUT);
 
   /*
    * El pin del boton como entrada
