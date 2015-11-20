@@ -9,8 +9,9 @@
   * Se puede extender con mas leds, como el disponible en la Arduino Nano
   */
 enum LEDS {
-   LED1 = 9,
-   LED2 = 10
+   ROJO = 9,
+   VERDE = 10,
+   NANO = 13
 };
 
 /**
@@ -93,7 +94,7 @@ class VelocistaEdu
   * funcion estatica que devuelve la tension de la bateria
   * @return La tension de la bateria en mV
   */
-    static int obtenerTensionBateria();
+    static unsigned int obtenerTensionBateria();
 
 /**
   * Funcion estatica que enciende un LED
@@ -116,7 +117,7 @@ class VelocistaEdu
     static unsigned int s[4]; //!< Guarda el valor de los sensores infrarrojos
 
   private:
-    static const uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN;
+    static const uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN, BUZZ;
 };
 
 inline void VelocistaEdu::encenderLed(LEDS led)
