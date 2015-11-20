@@ -1,5 +1,22 @@
 #include "velocistaEdu.h"
 
+#ifndef MOTOR_DERECHO_CAMBIAR_POLARIDAD
+#define MOTOR_DERECHO_AVANZA LOW
+#define MOTOR_DERECHO_RETROCEDE HIGH
+#else
+#define MOTOR_DERECHO_AVANZA HIGH
+#define MOTOR_DERECHO_RETROCEDE LOW
+#endif
+
+#ifndef MOTOR_IZQUIERDO_CAMBIAR_POLARIDAD
+#define MOTOR_IZQUIERDO_AVANZA LOW
+#define MOTOR_IZQUIERDO_RETROCEDE HIGH
+#else
+#define MOTOR_IZQUIERDO_AVANZA HIGH
+#define MOTOR_IZQUIERDO_RETROCEDE LOW
+#endif
+
+
 const uint8_t VelocistaEdu::BOTON = 0;
 const uint8_t VelocistaEdu::M_IZQ_PWM_PIN = 3;
 const uint8_t VelocistaEdu::M_IZQ_DIR_PIN = 4;
@@ -97,9 +114,9 @@ unsigned int VelocistaEdu::obtenerTensionBateria()
 void VelocistaEdu::establecerVelocidad(int velocidadIzquierda, int velocidadDerecha) {
   //Control de direccion para el motor derecho. Si el motor va al reves de lo esperado cambiar el LOW por HIGH y HIGH por LOW
   if (velocidadDerecha >= 0) {
-    digitalWrite(VelocistaEdu::M_DER_DIR_PIN, LOW);
+    digitalWrite(VelocistaEdu::M_DER_DIR_PIN, MOTOR_DERECHO_AVANZA);
   } else {
-    digitalWrite(VelocistaEdu::M_DER_DIR_PIN, HIGH);
+    digitalWrite(VelocistaEdu::M_DER_DIR_PIN, MOTOR_DERECHO_RETROCEDE);
   }
   //Ajuste de la velocidad maxima y minima para el motor derecho
   if (velocidadDerecha > 255) {
@@ -111,9 +128,9 @@ void VelocistaEdu::establecerVelocidad(int velocidadIzquierda, int velocidadDere
   
   //Control de direccion para el motor izquierdo. Si el motor va al reves de lo esperado cambiar el LOW por HIGH y HIGH por LOW
   if (velocidadIzquierda >= 0) {
-    digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, LOW);
+    digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, MOTOR_IZQUIERDO_AVANZA);
   } else {
-    digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, HIGH);
+    digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, MOTOR_IZQUIERDO_RETROCEDE);
   }
   //Ajuste de la velocidad maxima y minima para el motor izquierdo
   if (velocidadIzquierda > 255) {
