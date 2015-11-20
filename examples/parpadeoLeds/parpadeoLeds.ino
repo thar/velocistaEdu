@@ -7,10 +7,10 @@ void setup()
 
 void loop()
 {
-  VelocistaEdu::encenderLed(LED1);
-  VelocistaEdu::apagarLed(LED2);
+  VelocistaEdu::encenderLed(ROJO);
+  VelocistaEdu::apagarLed(VERDE);
   delay(500);
-  VelocistaEdu::encenderLed(LED2);
-  VelocistaEdu::apagarLed(LED1);
+  VelocistaEdu::encenderLed(VERDE);
+  VelocistaEdu::apagarLed(ROJO);
   delay(500);
 }
