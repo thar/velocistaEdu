@@ -2,6 +2,9 @@
 #define velocistaEdu_h
 
 #include "Arduino.h"
+#ifdef USE_INTERRUPT
+#include "EnableInterrupt.h"
+#endif
 
 /** 
   * enum para definir los pines de los LEDs
@@ -66,6 +69,26 @@ class VelocistaEdu
   */
     static void obtenerSensoresLinea(unsigned int s[4]);
 
+#ifdef USE_INTERRUPT
+/**
+  * Funcion estatica que aumenta la cuenta del encoder derecho
+  * Se usa en el modo de cuenta de encoders por interrupcion
+  * @see obtenerCuentaEncoders()
+  * @see resetearCuentaEncoders()
+  * @see aumentarCuentaIzquierda()
+  */
+    static void aumentarCuentaDerecha();
+
+/**
+  * Funcion estatica que aumenta la cuenta del encoder izquierdo
+  * Se usa en el modo de cuenta de encoders por interrupcion
+  * @see obtenerCuentaEncoders()
+  * @see resetearCuentaEncoders()
+  * @see aumentarCuentaDerecha()
+  */
+    static void aumentarCuentaIzquierda();
+
+#else
 /**
   * Funcion estatica que comprueba si las ruedas se han movido y actualiza el valor de la cuenta de los encoder
   * Esta funcion se tiene que llamar de forma periodica y con la mayor frecuencia posible para estar seguros de que contamos todos los pulsos
@@ -73,6 +96,7 @@ class VelocistaEdu
   * @see resetearCuentaEncoders()
   */
     static void actualizarEncoders();
+#endif
 
 /**
   * Funcion estatica que permite obtener la cuenta interna de los encoders
@@ -108,9 +132,12 @@ class VelocistaEdu
   */
     static void apagarLed(LEDS led);
 
+
   protected:
+#ifndef USE_INTERRUPT
     static boolean estadoEncoderDerecho; //!< Guarda el ultimo estado conocido del pin del encoder derecho
     static boolean estadoEncoderIzquierdo; //!< Guarda el ultimo estado conocido del pin del encoder izquierdo
+#endif
     static unsigned int cuentaEncoderDerecho; //!< Guarda la cuenta del encoder derecho
     static unsigned int cuentaEncoderIzquierdo; //!< Guarda la cuenta del encoder izquierdo
     static boolean esperandoSoltarBoton; //!< Permite controlar el momento en el que se libera el boton

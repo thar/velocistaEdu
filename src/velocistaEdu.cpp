@@ -49,6 +49,7 @@ boolean VelocistaEdu::botonLiberado()
  * Cada vez que cambia se aumenta la cuenta del encoder en uno.
  * Esa cuenta se guarda en las variables cuentaEncoderDerecho y cuentaEncoderIzquierdo
  */
+#ifndef USE_INTERRUPT
 void VelocistaEdu::actualizarEncoders()
 {
   int estadoEnc = digitalRead(VelocistaEdu::ENC_DER_PIN);
@@ -62,6 +63,17 @@ void VelocistaEdu::actualizarEncoders()
     VelocistaEdu::cuentaEncoderIzquierdo++;
   }
 }
+#else
+void VelocistaEdu::aumentarCuentaDerecha()
+{
+  VelocistaEdu::cuentaEncoderDerecho++;
+}
+
+void VelocistaEdu::aumentarCuentaIzquierda()
+{
+  VelocistaEdu::cuentaEncoderIzquierdo++;
+}
+#endif
 
 void VelocistaEdu::obtenerCuentaEncoders(int &encoderIzquierdo, int &encoderDerecho)
 {
@@ -162,7 +174,7 @@ int VelocistaEdu::obtenerMedidaLinea()
 }
 
 /*
- * TODO: Buzzer e IR
+ * TODO: IR
  */
 void VelocistaEdu::inicializar() {
   /*
@@ -196,5 +208,10 @@ void VelocistaEdu::inicializar() {
    * Necesita tambien el pull-up activo
    */
   pinMode(VelocistaEdu::BOTON, INPUT_PULLUP);
+
+#ifdef USE_INTERRUPT
+  enableInterrupt(VelocistaEdu::ENC_DER_PIN, VelocistaEdu::aumentarCuentaDerecha, CHANGE);
+  enableInterrupt(VelocistaEdu::ENC_IZQ_PIN, VelocistaEdu::aumentarCuentaIzquierda, CHANGE);
+#endif
 }
 

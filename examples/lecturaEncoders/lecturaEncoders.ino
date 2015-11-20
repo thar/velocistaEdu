@@ -1,3 +1,4 @@
+#define USE_INTERRUPT
 #include "velocistaEdu.h"
 
 void setup()
@@ -13,7 +14,9 @@ void setup()
 void loop()
 {
   int encoderDerecho, encoderIzquierdo;
+#ifndef USE_INTERRUPT
   VelocistaEdu::actualizarEncoders();
+#endif
   VelocistaEdu::obtenerCuentaEncoders(encoderIzquierdo, encoderDerecho);
   Serial.print(encoderIzquierdo);
   Serial.print(" ");
