@@ -14,7 +14,7 @@
  * La librería que se propone es solo una pequeña ayuda para que los primeros pasos con el kit sean lo más sencillos posibles.
  *
  * En la pagina oficial de la liga nacional de robotica de competición (http://lnrc.es/) se puede encontrar más información sobre los eventos que se desarrollan a lo largo de la geografía
- * española tanto para estudiantes como para gente con conocimientos más avanzados en los que se ponen a prueba los robots construidos y programados por los concursasntes.
+ * española tanto para estudiantes como para gente con conocimientos más avanzados en los que se ponen a prueba los robots construidos y programados por los concursantes.
  * En la sección de estudiantes se puede encontrar más información sobre los kits disponibles con vídeos sobre su montaje.
  *
  * \section install_sec Instalación
@@ -22,15 +22,23 @@
  * Copiar la carpeta completa del proyecto en la carpeta de librerías que crea Arduino.
  * Si el espacio en el disco donde se tiene que copiar la librería es muy escaso se pueden eliminar las carpetas "examples", "doc" y ".git"
  *
+ * La libreria puede hacer uso de interrupciones para actualizar la cuenta de encoders. Para usarla de este modo es necesario añadir la librería "EnableInterrupt" a la instalación de Arduino.
+ * La librería se puede encontrar en la siguiente dirección:
+ * https://github.com/GreyGnome/EnableInterrupt
+ * Para usar el velocistaEdu en este modo ver el ejemplo de lectura de encoders
+ *
  * \section examples Ejemplos
  *
  * La librería incluye unos ejemplos de uso sencillos. Una vez instalada la librería los ejemplos deberían aparecer en la sección de ejemplos del IDE Arduino
  * Los ejemplos disponibles ahora mismo son:
  *   -  lecturaBoton: Muestra un mensaje por el puerto serie cada vez que se suelta el botón de la placa principal del kit
  *   -  lecturaEncoders: Muestra por el puerto serie la cuenta de los encoders. Según se muevan las ruedas la cuenta debería incrementarse. Siempre contará hacia arriba,
- *         ya que el encoder en cuadratura no está disponible
+ *         ya que el encoder en cuadratura no está disponible.
+ *         es posible usar el modo de interrupcion para llevar la cuenta de los encoders. Para activarlo o desactivarlo hay que descomentar o comentar la línea
+ *         #define USE_INTERRUPT
  *   -  lecturaLeds: Muestra por el puerto serie la lectura analógica de los sensores infrarrojos
  *   -  parpadeoLeds: Hace que los leds de la placa del kit parpadeen. Solo uno deberia estar encendido en cada momento
  *   -  siguelineas: Implementación de un control PD para seguir una linea negra sobre un fondo blanco. Los paramentros del PD no están optimizados
+ *   -  movimientoRuedas: Testea el movimiento correcto de las ruedas. Permite saber si hay que usar una polaridad u otra en cada motor.
  *
  */
