@@ -1,5 +1,10 @@
 #include "velocistaEdu.h"
 
+/*
+ * Control de direccion para el motor derecho. Si el motor va al reves de lo esperado
+ * añadir el define MOTOR_DERECHO_CAMBIAR_POLARIDAD al inicio del programa. Justo
+ * antes de cualquier include
+ */
 #ifndef MOTOR_DERECHO_CAMBIAR_POLARIDAD
 #define MOTOR_DERECHO_AVANZA LOW
 #define MOTOR_DERECHO_RETROCEDE HIGH
@@ -8,6 +13,11 @@
 #define MOTOR_DERECHO_RETROCEDE LOW
 #endif
 
+/*
+ * Control de direccion para el motor izquierdo. Si el motor va al reves de lo esperado
+ * añadir el define MOTOR_IZQUIERDO_CAMBIAR_POLARIDAD al inicio del programa. Justo
+ * antes de cualquier include
+ */
 #ifndef MOTOR_IZQUIERDO_CAMBIAR_POLARIDAD
 #define MOTOR_IZQUIERDO_AVANZA LOW
 #define MOTOR_IZQUIERDO_RETROCEDE HIGH
@@ -112,7 +122,6 @@ unsigned int VelocistaEdu::obtenerTensionBateria()
 }
 
 void VelocistaEdu::establecerVelocidad(int velocidadIzquierda, int velocidadDerecha) {
-  //Control de direccion para el motor derecho. Si el motor va al reves de lo esperado cambiar el LOW por HIGH y HIGH por LOW
   if (velocidadDerecha >= 0) {
     digitalWrite(VelocistaEdu::M_DER_DIR_PIN, MOTOR_DERECHO_AVANZA);
   } else {
@@ -126,7 +135,6 @@ void VelocistaEdu::establecerVelocidad(int velocidadIzquierda, int velocidadDere
   }
   analogWrite(VelocistaEdu::M_DER_PWM_PIN, abs(velocidadDerecha));
   
-  //Control de direccion para el motor izquierdo. Si el motor va al reves de lo esperado cambiar el LOW por HIGH y HIGH por LOW
   if (velocidadIzquierda >= 0) {
     digitalWrite(VelocistaEdu::M_IZQ_DIR_PIN, MOTOR_IZQUIERDO_AVANZA);
   } else {
