@@ -103,8 +103,9 @@ class VelocistaEdu
     void apagarLed(const LEDS led) const;
 
 /**
-  * Funcion que apaga un LED
-  * @param[in] led el led que se quiere apagar
+  * Funcion que reproduce una nota en el buzzer
+  * @param[in] nota la nota en hercios a reproducir
+  * @param[in] duracion la duracion en milisegundos de la nota
   */
     void reproducirNota(unsigned int nota, unsigned int duracion) const;
    
@@ -114,8 +115,8 @@ class VelocistaEdu
   * Es privado, con lo que solo se pueden crear objetos de la clase VelocistaEdu haciendo uso de la
   * funcion amiga obtenerRobot
   * @see obtenerRobot()
-  * @param[in] cambiarPolaridadMotorIzquierdo, cambia la polaridad del motor izquierdo
-  * @param[in] cambiarPolaridadMotorDerecho, cambia la polaridad del motor derecho
+  * @param[in] cambiarPolaridadMotorIzquierdo cambia la polaridad del motor izquierdo
+  * @param[in] cambiarPolaridadMotorDerecho cambia la polaridad del motor derecho
   */
     VelocistaEdu(const boolean cambiarPolaridadMotorIzquierdo=false, const boolean cambiarPolaridadMotorDerecho=false);
 
@@ -132,8 +133,8 @@ class VelocistaEdu
 /**
   * Funcion amiga de la clase VelocistaEdu. Esto permite que pueda acceder a los miembros y metodos privados
   * De esta forma esta funcion es capaz de crear un objeto de tipo VelocistaEdu, pues el constructor es privado
-  * @param[in] cambiarPolaridadMotorIzquierdo, cambia la polaridad del motor izquierdo. Solo funiona la primera vez que es llada la funcion
-  * @param[in] cambiarPolaridadMotorDerecho, cambia la polaridad del motor derecho. Solo funiona la primera vez que es llada la funcion
+  * @param[in] cambiarPolaridadMotorIzquierdo cambia la polaridad del motor izquierdo. Solo funiona la primera vez que es llada la funcion
+  * @param[in] cambiarPolaridadMotorDerecho cambia la polaridad del motor derecho. Solo funiona la primera vez que es llada la funcion
   */
 VelocistaEdu & obtenerRobot(const boolean cambiarPolaridadMotorIzquierdo = false, const boolean cambiarPolaridadMotorDerecho = false);
 
