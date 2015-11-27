@@ -31,7 +31,6 @@ class VelocistaEdu
   public:
     friend VelocistaEdu & obtenerRobot(const boolean cambiarPolaridadMotorIzquierdo, const boolean cambiarPolaridadMotorDerecho);
 
-
 /**
   * Funcion que establece pone un pwm en los motores
   * @param[in] velocidadIzquierda PWM para el motor izquierdo
@@ -71,14 +70,13 @@ class VelocistaEdu
   */
     void obtenerSensoresLinea(unsigned int s[4]) const;
 
-
 /**
   * Funcion que permite obtener la cuenta interna de los encoders
   * @see resetearCuentaEncoders()
   * @param[out] encoderIzquierdo variable donde se guardara la cuenta para el encoder de la rueda izquierda
   * @param[out] encoderDerecho variable donde se guardara la cuenta para el encoder de la rueda derecha
   */
-    void obtenerCuentaEncoders(int &encoderIzquierdo, int &encoderDerecho) const;
+    void obtenerCuentaEncoders(unsigned int &encoderIzquierdo, unsigned int &encoderDerecho) const;
 
 /**
   * Funcion que pone la cuenta de los encoder a 0
@@ -110,8 +108,6 @@ class VelocistaEdu
   */
     void reproducirNota(unsigned int nota, unsigned int duracion) const;
    
-
-
   protected:
 /**
   * Constructor que inicializa los pines usados por el kit
@@ -125,8 +121,8 @@ class VelocistaEdu
 
     boolean esperandoSoltarBoton_; //!< Permite controlar el momento en el que se libera el boton
     unsigned int s_[4]; //!< Guarda el valor de los sensores infrarrojos
-    const bool motorIzquierdoAvanza_;
-    const bool motorDerechoAvanza_;
+    const bool motorIzquierdoAvanza_; //!< Valor que se le debe poner al pin de direccion izquierdo para que el motor izquierdo avance
+    const bool motorDerechoAvanza_; //!< Valor que se le debe poner al pin de direccion derecho para que el motor derecho avance
 
   private:
     static const uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN, BUZZ, PULSOS_POR_REVOLUCION;

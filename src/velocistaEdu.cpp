@@ -178,7 +178,7 @@ int VelocistaEdu::obtenerMedidaLinea() const
   return posicion/100;
 }
 
-void VelocistaEdu::obtenerCuentaEncoders(int &encoderIzquierdo, int &encoderDerecho) const
+void VelocistaEdu::obtenerCuentaEncoders(unsigned int &encoderIzquierdo, unsigned int &encoderDerecho) const
 {
   encoderIzquierdo = cuentaEncoderIzquierdo;
   encoderDerecho = cuentaEncoderDerecho;
