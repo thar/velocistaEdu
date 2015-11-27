@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For Firmata
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+VelocistaEdu	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+obtenerRobot	KEYWORD2
+establecerVelocidad	KEYWORD2
+botonLiberado	KEYWORD2
+actualizarSensoresLinea	KEYWORD2
+obtenerMedidaLinea	KEYWORD2
+obtenerSensoresLinea	KEYWORD2
+obtenerCuentaEncoders	KEYWORD2
+resetearCuentaEncoders	KEYWORD2
+obtenerTensionBateria	KEYWORD2
+encenderLed	KEYWORD2
+apagarLed	KEYWORD2
+reproducirNota	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+ROJO	LITERAL1
+VERDE	LITERAL1
+NANO	LITERAL1
+
