@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['velocistaedu',['VelocistaEdu',['../classVelocistaEdu.html',1,'']]]
+  ['Índice_20de_20velocistaedu',['Índice de velocistaEdu',['../index.html',1,'']]]
 ];

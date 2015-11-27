@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['s_5f',['s_',['../classVelocistaEdu.html#afe484212da21e603821b6fa8cf22bdef',1,'VelocistaEdu']]]
+  ['reproducirnota',['reproducirNota',['../classVelocistaEdu.html#a49add121c06ab6b1917408c729ce84ff',1,'VelocistaEdu']]],
+  ['resetearcuentaencoders',['resetearCuentaEncoders',['../classVelocistaEdu.html#ac89e4248b893783469feb67479346b55',1,'VelocistaEdu']]]
 ];

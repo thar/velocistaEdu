@@ -105,8 +105,8 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:add507094d7f7e89364153e2bf3344da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f44fb6e9fb52ce2ebc6d6de95b98af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#aa5f44fb6e9fb52ce2ebc6d6de95b98af">obtenerSensoresLinea</a> (unsigned int s[4]) const </td></tr>
 <tr class="separator:aa5f44fb6e9fb52ce2ebc6d6de95b98af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe3b22295bb3fc33fdb85f4259538ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#afe3b22295bb3fc33fdb85f4259538ad9">obtenerCuentaEncoders</a> (int &amp;encoderIzquierdo, int &amp;encoderDerecho) const </td></tr>
-<tr class="separator:afe3b22295bb3fc33fdb85f4259538ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a451e06d102d677798022ec9d252af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a94a451e06d102d677798022ec9d252af">obtenerCuentaEncoders</a> (unsigned int &amp;encoderIzquierdo, unsigned int &amp;encoderDerecho) const </td></tr>
+<tr class="separator:a94a451e06d102d677798022ec9d252af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac89e4248b893783469feb67479346b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ac89e4248b893783469feb67479346b55">resetearCuentaEncoders</a> () const </td></tr>
 <tr class="separator:ac89e4248b893783469feb67479346b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69aaeb74d93e888cef2f2b677b686c5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ae69aaeb74d93e888cef2f2b677b686c5">obtenerTensionBateria</a> () const </td></tr>
@@ -134,10 +134,12 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:afe484212da21e603821b6fa8cf22bdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el valor de los sensores infrarrojos. <br/></td></tr>
 <tr class="separator:afe484212da21e603821b6fa8cf22bdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad432bb5114fbc219c0ee1dd08a4aca55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad432bb5114fbc219c0ee1dd08a4aca55"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>motorIzquierdoAvanza_</b></td></tr>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ad432bb5114fbc219c0ee1dd08a4aca55">motorIzquierdoAvanza_</a></td></tr>
+<tr class="memdesc:ad432bb5114fbc219c0ee1dd08a4aca55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor que se le debe poner al pin de direccion izquierdo para que el motor izquierdo avance. <br/></td></tr>
 <tr class="separator:ad432bb5114fbc219c0ee1dd08a4aca55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c98ab183be5fdc1ba1bedd12e53be3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c98ab183be5fdc1ba1bedd12e53be3f"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>motorDerechoAvanza_</b></td></tr>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a1c98ab183be5fdc1ba1bedd12e53be3f">motorDerechoAvanza_</a></td></tr>
+<tr class="memdesc:a1c98ab183be5fdc1ba1bedd12e53be3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor que se le debe poner al pin de direccion derecho para que el motor derecho avance. <br/></td></tr>
 <tr class="separator:a1c98ab183be5fdc1ba1bedd12e53be3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -183,8 +185,8 @@ Amigas</h2></td></tr>
 <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#a81e1b64a9626e5299e01220234c188d6">obtenerRobot()</a> </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorIzquierdo,cambia</td><td>la polaridad del motor izquierdo </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorDerecho,cambia</td><td>la polaridad del motor derecho </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorIzquierdo</td><td>cambia la polaridad del motor izquierdo </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorDerecho</td><td>cambia la polaridad del motor derecho </td></tr>
   </table>
   </dd>
 </dl>
@@ -324,20 +326,20 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afe3b22295bb3fc33fdb85f4259538ad9"></a>
+<a class="anchor" id="a94a451e06d102d677798022ec9d252af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void VelocistaEdu::obtenerCuentaEncoders </td>
           <td>(</td>
-          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
           <td class="paramname"><em>encoderIzquierdo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
           <td class="paramname"><em>encoderDerecho</em>&#160;</td>
         </tr>
         <tr>
@@ -461,10 +463,11 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion que apaga un LED </p>
+<p>Funcion que reproduce una nota en el buzzer </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">led</td><td>el led que se quiere apagar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nota</td><td>la nota en hercios a reproducir </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">duracion</td><td>la duracion en milisegundos de la nota </td></tr>
   </table>
   </dd>
 </dl>
@@ -484,7 +487,7 @@ Amigas</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Funcion que pone la cuenta de los encoder a 0 </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#afe3b22295bb3fc33fdb85f4259538ad9">obtenerCuentaEncoders()</a> </dd></dl>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#a94a451e06d102d677798022ec9d252af">obtenerCuentaEncoders()</a> </dd></dl>
 
 </div>
 </div>
@@ -523,8 +526,8 @@ Amigas</h2></td></tr>
 <p>Funcion amiga de la clase <a class="el" href="classVelocistaEdu.html">VelocistaEdu</a>. Esto permite que pueda acceder a los miembros y metodos privados De esta forma esta funcion es capaz de crear un objeto de tipo <a class="el" href="classVelocistaEdu.html">VelocistaEdu</a>, pues el constructor es privado </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorIzquierdo,cambia</td><td>la polaridad del motor izquierdo. Solo funiona la primera vez que es llada la funcion </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorDerecho,cambia</td><td>la polaridad del motor derecho. Solo funiona la primera vez que es llada la funcion </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorIzquierdo</td><td>cambia la polaridad del motor izquierdo. Solo funiona la primera vez que es llada la funcion </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorDerecho</td><td>cambia la polaridad del motor derecho. Solo funiona la primera vez que es llada la funcion </td></tr>
   </table>
   </dd>
 </dl>
@@ -538,7 +541,7 @@ Amigas</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Viernes, 27 de Noviembre de 2015 18:57:00 para velocistaEdu por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 27 de Noviembre de 2015 19:19:23 para velocistaEdu por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

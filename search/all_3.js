@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['obtenercuentaencoders',['obtenerCuentaEncoders',['../classVelocistaEdu.html#afe3b22295bb3fc33fdb85f4259538ad9',1,'VelocistaEdu']]],
-  ['obtenermedidalinea',['obtenerMedidaLinea',['../classVelocistaEdu.html#add507094d7f7e89364153e2bf3344da4',1,'VelocistaEdu']]],
-  ['obtenerrobot',['obtenerRobot',['../classVelocistaEdu.html#a81e1b64a9626e5299e01220234c188d6',1,'VelocistaEdu']]],
-  ['obtenersensoreslinea',['obtenerSensoresLinea',['../classVelocistaEdu.html#aa5f44fb6e9fb52ce2ebc6d6de95b98af',1,'VelocistaEdu']]],
-  ['obtenertensionbateria',['obtenerTensionBateria',['../classVelocistaEdu.html#ae69aaeb74d93e888cef2f2b677b686c5',1,'VelocistaEdu']]]
+  ['motorderechoavanza_5f',['motorDerechoAvanza_',['../classVelocistaEdu.html#a1c98ab183be5fdc1ba1bedd12e53be3f',1,'VelocistaEdu']]],
+  ['motorizquierdoavanza_5f',['motorIzquierdoAvanza_',['../classVelocistaEdu.html#ad432bb5114fbc219c0ee1dd08a4aca55',1,'VelocistaEdu']]]
 ];

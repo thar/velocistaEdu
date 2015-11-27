@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['velocistaedu',['VelocistaEdu',['../classVelocistaEdu.html',1,'VelocistaEdu'],['../classVelocistaEdu.html#a1b3d54ba7557f3975581061ed9ed801a',1,'VelocistaEdu::VelocistaEdu()']]]
+  ['s_5f',['s_',['../classVelocistaEdu.html#afe484212da21e603821b6fa8cf22bdef',1,'VelocistaEdu']]]
 ];
