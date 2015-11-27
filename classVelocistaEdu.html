@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,8 +81,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Métodos públicos estáticos</a> &#124;
-<a href="#pro-static-attribs">Atributos protegidos estáticos</a> &#124;
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pro-methods">Métodos protegidos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="#friends">Amigas</a> &#124;
 <a href="classVelocistaEdu-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia de la Clase VelocistaEdu</div>  </div>
@@ -91,68 +93,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 
 <p><code>#include &lt;<a class="el" href="velocistaEdu_8h_source.html">velocistaEdu.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Métodos públicos estáticos</h2></td></tr>
-<tr class="memitem:a25cef84df3fb113c7605ef584acc4791"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a25cef84df3fb113c7605ef584acc4791">inicializar</a> ()</td></tr>
-<tr class="separator:a25cef84df3fb113c7605ef584acc4791"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a310d6308d71269f0ab368df057bed863"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a310d6308d71269f0ab368df057bed863">establecerVelocidad</a> (int velocidadIzquierda, int velocidadDerecha)</td></tr>
-<tr class="separator:a310d6308d71269f0ab368df057bed863"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7a4e6998613c3a4bc6932ac36cbabd5"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ac7a4e6998613c3a4bc6932ac36cbabd5">botonLiberado</a> ()</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a968ff44ba51749f610754c66d586be5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a968ff44ba51749f610754c66d586be5f">establecerVelocidad</a> (int velocidadIzquierda, int velocidadDerecha) const </td></tr>
+<tr class="separator:a968ff44ba51749f610754c66d586be5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a4e6998613c3a4bc6932ac36cbabd5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ac7a4e6998613c3a4bc6932ac36cbabd5">botonLiberado</a> ()</td></tr>
 <tr class="separator:ac7a4e6998613c3a4bc6932ac36cbabd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8cc7494181803a62e6c018688360af2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea</a> ()</td></tr>
+<tr class="memitem:ac8cc7494181803a62e6c018688360af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea</a> ()</td></tr>
 <tr class="separator:ac8cc7494181803a62e6c018688360af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a917c5a5db3464f24ff0f1d088db20c1f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a917c5a5db3464f24ff0f1d088db20c1f">obtenerMedidaLinea</a> ()</td></tr>
-<tr class="separator:a917c5a5db3464f24ff0f1d088db20c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a584073fb623a16c9286c20273431d27a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">obtenerSensoresLinea</a> (unsigned int <a class="el" href="classVelocistaEdu.html#ae3107ce76e04c78e7294bef7c14c544a">s</a>[4])</td></tr>
-<tr class="separator:a584073fb623a16c9286c20273431d27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e0494d4e436f16cd76b303b39755dc7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a3e0494d4e436f16cd76b303b39755dc7">aumentarCuentaDerecha</a> ()</td></tr>
-<tr class="separator:a3e0494d4e436f16cd76b303b39755dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df841361b31a43a048cd9e8f89e9fb0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a1df841361b31a43a048cd9e8f89e9fb0">aumentarCuentaIzquierda</a> ()</td></tr>
-<tr class="separator:a1df841361b31a43a048cd9e8f89e9fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a8437ea728a209140eff908bdcd2ae0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a2a8437ea728a209140eff908bdcd2ae0">actualizarEncoders</a> ()</td></tr>
-<tr class="separator:a2a8437ea728a209140eff908bdcd2ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed23e7a0cc9fcbcaa09edcef6bd76a76"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">obtenerCuentaEncoders</a> (int &amp;encoderIzquierdo, int &amp;encoderDerecho)</td></tr>
-<tr class="separator:aed23e7a0cc9fcbcaa09edcef6bd76a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61d5fd4eafd7353e0de1cc404e52287e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">resetearCuentaEncoders</a> ()</td></tr>
-<tr class="separator:a61d5fd4eafd7353e0de1cc404e52287e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecb4d0cfdbf3e34dd6acdfb2f53479d2"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#aecb4d0cfdbf3e34dd6acdfb2f53479d2">obtenerTensionBateria</a> ()</td></tr>
-<tr class="separator:aecb4d0cfdbf3e34dd6acdfb2f53479d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b51e9c36a2f5d57e763904b38c79e3d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d">encenderLed</a> (LEDS led)</td></tr>
-<tr class="separator:a7b51e9c36a2f5d57e763904b38c79e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00c86220166c03bc3066bd6d1368c6b1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a00c86220166c03bc3066bd6d1368c6b1">apagarLed</a> (LEDS led)</td></tr>
-<tr class="separator:a00c86220166c03bc3066bd6d1368c6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add507094d7f7e89364153e2bf3344da4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#add507094d7f7e89364153e2bf3344da4">obtenerMedidaLinea</a> () const </td></tr>
+<tr class="separator:add507094d7f7e89364153e2bf3344da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f44fb6e9fb52ce2ebc6d6de95b98af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#aa5f44fb6e9fb52ce2ebc6d6de95b98af">obtenerSensoresLinea</a> (unsigned int s[4]) const </td></tr>
+<tr class="separator:aa5f44fb6e9fb52ce2ebc6d6de95b98af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3b22295bb3fc33fdb85f4259538ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#afe3b22295bb3fc33fdb85f4259538ad9">obtenerCuentaEncoders</a> (int &amp;encoderIzquierdo, int &amp;encoderDerecho) const </td></tr>
+<tr class="separator:afe3b22295bb3fc33fdb85f4259538ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89e4248b893783469feb67479346b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ac89e4248b893783469feb67479346b55">resetearCuentaEncoders</a> () const </td></tr>
+<tr class="separator:ac89e4248b893783469feb67479346b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69aaeb74d93e888cef2f2b677b686c5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ae69aaeb74d93e888cef2f2b677b686c5">obtenerTensionBateria</a> () const </td></tr>
+<tr class="separator:ae69aaeb74d93e888cef2f2b677b686c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81b4b75b7964f60436990546e5b8674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ad81b4b75b7964f60436990546e5b8674">encenderLed</a> (const LEDS led) const </td></tr>
+<tr class="separator:ad81b4b75b7964f60436990546e5b8674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a2fba468fc4ce2d28a193a673f8899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ae5a2fba468fc4ce2d28a193a673f8899">apagarLed</a> (const LEDS led) const </td></tr>
+<tr class="separator:ae5a2fba468fc4ce2d28a193a673f8899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49add121c06ab6b1917408c729ce84ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a49add121c06ab6b1917408c729ce84ff">reproducirNota</a> (unsigned int nota, unsigned int duracion) const </td></tr>
+<tr class="separator:a49add121c06ab6b1917408c729ce84ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Atributos protegidos estáticos</h2></td></tr>
-<tr class="memitem:a48796ee6f8f1c128ab01590b1bce3b15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48796ee6f8f1c128ab01590b1bce3b15"></a>
-static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a48796ee6f8f1c128ab01590b1bce3b15">estadoEncoderDerecho</a> = 0</td></tr>
-<tr class="memdesc:a48796ee6f8f1c128ab01590b1bce3b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el ultimo estado conocido del pin del encoder derecho. <br/></td></tr>
-<tr class="separator:a48796ee6f8f1c128ab01590b1bce3b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a729e902ea3de6fefc0dcade05ffbadd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a729e902ea3de6fefc0dcade05ffbadd2"></a>
-static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a729e902ea3de6fefc0dcade05ffbadd2">estadoEncoderIzquierdo</a> = 0</td></tr>
-<tr class="memdesc:a729e902ea3de6fefc0dcade05ffbadd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el ultimo estado conocido del pin del encoder izquierdo. <br/></td></tr>
-<tr class="separator:a729e902ea3de6fefc0dcade05ffbadd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4189c2ebbfd422b08f378fb7682777b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4189c2ebbfd422b08f378fb7682777b"></a>
-static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ab4189c2ebbfd422b08f378fb7682777b">cuentaEncoderDerecho</a> = 0</td></tr>
-<tr class="memdesc:ab4189c2ebbfd422b08f378fb7682777b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda la cuenta del encoder derecho. <br/></td></tr>
-<tr class="separator:ab4189c2ebbfd422b08f378fb7682777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b0bb2c8ffc67ecb71fc725f03157b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92b0bb2c8ffc67ecb71fc725f03157b8"></a>
-static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a92b0bb2c8ffc67ecb71fc725f03157b8">cuentaEncoderIzquierdo</a> = 0</td></tr>
-<tr class="memdesc:a92b0bb2c8ffc67ecb71fc725f03157b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda la cuenta del encoder izquierdo. <br/></td></tr>
-<tr class="separator:a92b0bb2c8ffc67ecb71fc725f03157b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a33ff5b30caff9c7a368006ea9dcd38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a33ff5b30caff9c7a368006ea9dcd38"></a>
-static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a8a33ff5b30caff9c7a368006ea9dcd38">esperandoSoltarBoton</a> = 0</td></tr>
-<tr class="memdesc:a8a33ff5b30caff9c7a368006ea9dcd38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permite controlar el momento en el que se libera el boton. <br/></td></tr>
-<tr class="separator:a8a33ff5b30caff9c7a368006ea9dcd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3107ce76e04c78e7294bef7c14c544a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3107ce76e04c78e7294bef7c14c544a"></a>
-static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#ae3107ce76e04c78e7294bef7c14c544a">s</a> [4] = {0, 0, 0, 0}</td></tr>
-<tr class="memdesc:ae3107ce76e04c78e7294bef7c14c544a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el valor de los sensores infrarrojos. <br/></td></tr>
-<tr class="separator:ae3107ce76e04c78e7294bef7c14c544a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:a1b3d54ba7557f3975581061ed9ed801a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a1b3d54ba7557f3975581061ed9ed801a">VelocistaEdu</a> (const boolean cambiarPolaridadMotorIzquierdo=false, const boolean cambiarPolaridadMotorDerecho=false)</td></tr>
+<tr class="separator:a1b3d54ba7557f3975581061ed9ed801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:a7e76cf8c4d3dd784489cbf249c6e9688"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e76cf8c4d3dd784489cbf249c6e9688"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a7e76cf8c4d3dd784489cbf249c6e9688">esperandoSoltarBoton_</a></td></tr>
+<tr class="memdesc:a7e76cf8c4d3dd784489cbf249c6e9688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permite controlar el momento en el que se libera el boton. <br/></td></tr>
+<tr class="separator:a7e76cf8c4d3dd784489cbf249c6e9688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe484212da21e603821b6fa8cf22bdef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe484212da21e603821b6fa8cf22bdef"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#afe484212da21e603821b6fa8cf22bdef">s_</a> [4]</td></tr>
+<tr class="memdesc:afe484212da21e603821b6fa8cf22bdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el valor de los sensores infrarrojos. <br/></td></tr>
+<tr class="separator:afe484212da21e603821b6fa8cf22bdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad432bb5114fbc219c0ee1dd08a4aca55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad432bb5114fbc219c0ee1dd08a4aca55"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>motorIzquierdoAvanza_</b></td></tr>
+<tr class="separator:ad432bb5114fbc219c0ee1dd08a4aca55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c98ab183be5fdc1ba1bedd12e53be3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c98ab183be5fdc1ba1bedd12e53be3f"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>motorDerechoAvanza_</b></td></tr>
+<tr class="separator:a1c98ab183be5fdc1ba1bedd12e53be3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:a81e1b64a9626e5299e01220234c188d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVelocistaEdu.html">VelocistaEdu</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVelocistaEdu.html#a81e1b64a9626e5299e01220234c188d6">obtenerRobot</a> (const boolean cambiarPolaridadMotorIzquierdo, const boolean cambiarPolaridadMotorDerecho)</td></tr>
+<tr class="separator:a81e1b64a9626e5299e01220234c188d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Clase de control del velocistaEdu Tiene las funciones basicas para empezar a usar el kit de velocista No tiene constructor ni destructor porque todos sus miembros son estaticos </p>
-</div><h2 class="groupheader">Documentación de las funciones miembro</h2>
-<a class="anchor" id="a2a8437ea728a209140eff908bdcd2ae0"></a>
+<div class="textblock"><p>Clase de control del velocistaEdu Tiene las funciones basicas para empezar a usar el kit de velocista El objeto de control solo se puede obtener mediante una llamada a la funcion obtenerRobot Esto implementa un patron singleton para asegurar que solo hay un objeto de tipo <a class="el" href="classVelocistaEdu.html">VelocistaEdu</a> en el programa </p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a1b3d54ba7557f3975581061ed9ed801a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -160,31 +156,45 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void VelocistaEdu::actualizarEncoders </td>
+          <td class="memname">VelocistaEdu::VelocistaEdu </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const boolean&#160;</td>
+          <td class="paramname"><em>cambiarPolaridadMotorIzquierdo</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const boolean&#160;</td>
+          <td class="paramname"><em>cambiarPolaridadMotorDerecho</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion estatica que comprueba si las ruedas se han movido y actualiza el valor de la cuenta de los encoder Esta funcion se tiene que llamar de forma periodica y con la mayor frecuencia posible para estar seguros de que contamos todos los pulsos </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">obtenerCuentaEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">resetearCuentaEncoders()</a> </dd></dl>
+<p>Constructor que inicializa los pines usados por el kit Es privado, con lo que solo se pueden crear objetos de la clase <a class="el" href="classVelocistaEdu.html">VelocistaEdu</a> haciendo uso de la funcion amiga obtenerRobot </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#a81e1b64a9626e5299e01220234c188d6">obtenerRobot()</a> </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorIzquierdo,cambia</td><td>la polaridad del motor izquierdo </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorDerecho,cambia</td><td>la polaridad del motor derecho </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
 <a class="anchor" id="ac8cc7494181803a62e6c018688360af2"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void VelocistaEdu::actualizarSensoresLinea </td>
@@ -193,20 +203,15 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Funcion estatica que actualiza las variables internas que guardan los valores de los sensores infrarrojos </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#a917c5a5db3464f24ff0f1d088db20c1f">obtenerMedidaLinea()</a> </dd>
+<p>Funcion que actualiza las variables internas que guardan los valores de los sensores infrarrojos </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#add507094d7f7e89364153e2bf3344da4">obtenerMedidaLinea()</a> </dd>
 <dd>
-<a class="el" href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">obtenerSensoresLinea()</a> </dd></dl>
+<a class="el" href="classVelocistaEdu.html#aa5f44fb6e9fb52ce2ebc6d6de95b98af">obtenerSensoresLinea()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a00c86220166c03bc3066bd6d1368c6b1"></a>
+<a class="anchor" id="ae5a2fba468fc4ce2d28a193a673f8899"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -216,18 +221,18 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
         <tr>
           <td class="memname">void VelocistaEdu::apagarLed </td>
           <td>(</td>
-          <td class="paramtype">LEDS&#160;</td>
+          <td class="paramtype">const LEDS&#160;</td>
           <td class="paramname"><em>led</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion estatica que apaga un LED </p>
+<p>Funcion que apaga un LED </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">led</td><td>el led que se quiere apagar </td></tr>
@@ -237,70 +242,9 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
-<a class="anchor" id="a3e0494d4e436f16cd76b303b39755dc7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VelocistaEdu::aumentarCuentaDerecha </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Funcion estatica que aumenta la cuenta del encoder derecho Se usa en el modo de cuenta de encoders por interrupcion </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">obtenerCuentaEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">resetearCuentaEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#a1df841361b31a43a048cd9e8f89e9fb0">aumentarCuentaIzquierda()</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a1df841361b31a43a048cd9e8f89e9fb0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VelocistaEdu::aumentarCuentaIzquierda </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Funcion estatica que aumenta la cuenta del encoder izquierdo Se usa en el modo de cuenta de encoders por interrupcion </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">obtenerCuentaEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">resetearCuentaEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#a3e0494d4e436f16cd76b303b39755dc7">aumentarCuentaDerecha()</a> </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ac7a4e6998613c3a4bc6932ac36cbabd5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">boolean VelocistaEdu::botonLiberado </td>
@@ -309,18 +253,13 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Funcion estatica que comprueba las pulsaciones en el boton del robot </p>
+<p>Funcion que comprueba las pulsaciones en el boton del robot </p>
 <dl class="section return"><dt>Devuelve</dt><dd>true cuando se suelta el boton, false en el resto de condiciones </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a7b51e9c36a2f5d57e763904b38c79e3d"></a>
+<a class="anchor" id="ad81b4b75b7964f60436990546e5b8674"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -330,18 +269,18 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
         <tr>
           <td class="memname">void VelocistaEdu::encenderLed </td>
           <td>(</td>
-          <td class="paramtype">LEDS&#160;</td>
+          <td class="paramtype">const LEDS&#160;</td>
           <td class="paramname"><em>led</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion estatica que enciende un LED </p>
+<p>Funcion que enciende un LED </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">led</td><td>el led que se quiere encender </td></tr>
@@ -351,12 +290,9 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
-<a class="anchor" id="a310d6308d71269f0ab368df057bed863"></a>
+<a class="anchor" id="a968ff44ba51749f610754c66d586be5f"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void VelocistaEdu::establecerVelocidad </td>
@@ -373,16 +309,11 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Funcion estatica que establece pone un pwm en los motores </p>
+<p>Funcion que establece pone un pwm en los motores </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">velocidadIzquierda</td><td>PWM para el motor izquierdo </td></tr>
@@ -393,36 +324,9 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
-<a class="anchor" id="a25cef84df3fb113c7605ef584acc4791"></a>
+<a class="anchor" id="afe3b22295bb3fc33fdb85f4259538ad9"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VelocistaEdu::inicializar </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Funcion estatica de inicializacion de los pines usados por el kit </p>
-
-</div>
-</div>
-<a class="anchor" id="aed23e7a0cc9fcbcaa09edcef6bd76a76"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void VelocistaEdu::obtenerCuentaEncoders </td>
@@ -439,19 +343,12 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Funcion estatica que permite obtener la cuenta interna de los encoders </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#a2a8437ea728a209140eff908bdcd2ae0">actualizarEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e">resetearCuentaEncoders()</a> </dd></dl>
+<p>Funcion que permite obtener la cuenta interna de los encoders </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#ac89e4248b893783469feb67479346b55">resetearCuentaEncoders()</a> </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">encoderIzquierdo</td><td>variable donde se guardara la cuenta para el encoder de la rueda izquierda </td></tr>
@@ -462,35 +359,27 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
-<a class="anchor" id="a917c5a5db3464f24ff0f1d088db20c1f"></a>
+<a class="anchor" id="add507094d7f7e89364153e2bf3344da4"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int VelocistaEdu::obtenerMedidaLinea </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>funcion estatica que devuelve la posicion de la linea detectada Cuando la linea se deja de detectar devuelve el ultimo valor bueno conocido Es necesario haber llamado a la funcion <a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea()</a> para usar los valores de los sensores mas actuales </p>
+<p>funcion que devuelve la posicion de la linea detectada Cuando la linea se deja de detectar devuelve el ultimo valor bueno conocido Es necesario haber llamado a la funcion <a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea()</a> para usar los valores de los sensores mas actuales </p>
 <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea()</a> </dd>
 <dd>
-<a class="el" href="classVelocistaEdu.html#a584073fb623a16c9286c20273431d27a">obtenerSensoresLinea()</a> </dd></dl>
+<a class="el" href="classVelocistaEdu.html#aa5f44fb6e9fb52ce2ebc6d6de95b98af">obtenerSensoresLinea()</a> </dd></dl>
 <dl class="section return"><dt>Devuelve</dt><dd>La posicion de la linea entre -30 y 30 (aproximadamente) </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a584073fb623a16c9286c20273431d27a"></a>
+<a class="anchor" id="aa5f44fb6e9fb52ce2ebc6d6de95b98af"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -502,19 +391,19 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>s</em>[4]</td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion estatica que guarda en un array los ultimos valores conocidos de los sensores inrarojos Es necesario haber llamado a la funcion <a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea()</a> para usar los valores de los sensores mas actuales </p>
+<p>Funcion que guarda en un array los ultimos valores conocidos de los sensores inrarojos Es necesario haber llamado a la funcion <a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea()</a> para usar los valores de los sensores mas actuales </p>
 <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#ac8cc7494181803a62e6c018688360af2">actualizarSensoresLinea()</a> </dd>
 <dd>
-<a class="el" href="classVelocistaEdu.html#a917c5a5db3464f24ff0f1d088db20c1f">obtenerMedidaLinea()</a> </dd></dl>
+<a class="el" href="classVelocistaEdu.html#add507094d7f7e89364153e2bf3344da4">obtenerMedidaLinea()</a> </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">s</td><td>array donde se guardaran los valores de los sensores </td></tr>
@@ -524,32 +413,24 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
-<a class="anchor" id="aecb4d0cfdbf3e34dd6acdfb2f53479d2"></a>
+<a class="anchor" id="ae69aaeb74d93e888cef2f2b677b686c5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int VelocistaEdu::obtenerTensionBateria </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>funcion estatica que devuelve la tension de la bateria </p>
+<p>funcion que devuelve la tension de la bateria </p>
 <dl class="section return"><dt>Devuelve</dt><dd>La tension de la bateria en mV </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a61d5fd4eafd7353e0de1cc404e52287e"></a>
+<a class="anchor" id="a49add121c06ab6b1917408c729ce84ff"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -557,22 +438,96 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void VelocistaEdu::resetearCuentaEncoders </td>
+          <td class="memname">void VelocistaEdu::reproducirNota </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nota</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>duracion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Funcion estatica que pone la cuenta de los encoder a 0 </p>
-<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#a2a8437ea728a209140eff908bdcd2ae0">actualizarEncoders()</a> </dd>
-<dd>
-<a class="el" href="classVelocistaEdu.html#aed23e7a0cc9fcbcaa09edcef6bd76a76">obtenerCuentaEncoders()</a> </dd></dl>
+<p>Funcion que apaga un LED </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">led</td><td>el led que se quiere apagar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac89e4248b893783469feb67479346b55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VelocistaEdu::resetearCuentaEncoders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funcion que pone la cuenta de los encoder a 0 </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classVelocistaEdu.html#afe3b22295bb3fc33fdb85f4259538ad9">obtenerCuentaEncoders()</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones relacionadas y clases amigas</h2>
+<a class="anchor" id="a81e1b64a9626e5299e01220234c188d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVelocistaEdu.html">VelocistaEdu</a>&amp; obtenerRobot </td>
+          <td>(</td>
+          <td class="paramtype">const boolean&#160;</td>
+          <td class="paramname"><em>cambiarPolaridadMotorIzquierdo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const boolean&#160;</td>
+          <td class="paramname"><em>cambiarPolaridadMotorDerecho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Funcion amiga de la clase <a class="el" href="classVelocistaEdu.html">VelocistaEdu</a>. Esto permite que pueda acceder a los miembros y metodos privados De esta forma esta funcion es capaz de crear un objeto de tipo <a class="el" href="classVelocistaEdu.html">VelocistaEdu</a>, pues el constructor es privado </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorIzquierdo,cambia</td><td>la polaridad del motor izquierdo. Solo funiona la primera vez que es llada la funcion </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cambiarPolaridadMotorDerecho,cambia</td><td>la polaridad del motor derecho. Solo funiona la primera vez que es llada la funcion </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -583,7 +538,7 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Sábado, 21 de Noviembre de 2015 10:52:51 para velocistaEdu por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Viernes, 27 de Noviembre de 2015 18:57:00 para velocistaEdu por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

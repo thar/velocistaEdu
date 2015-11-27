@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inicializar',['inicializar',['../classVelocistaEdu.html#a25cef84df3fb113c7605ef584acc4791',1,'VelocistaEdu']]]
+  ['reproducirnota',['reproducirNota',['../classVelocistaEdu.html#a49add121c06ab6b1917408c729ce84ff',1,'VelocistaEdu']]],
+  ['resetearcuentaencoders',['resetearCuentaEncoders',['../classVelocistaEdu.html#ac89e4248b893783469feb67479346b55',1,'VelocistaEdu']]]
 ];

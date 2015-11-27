@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['encenderled',['encenderLed',['../classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d',1,'VelocistaEdu']]],
-  ['esperandosoltarboton',['esperandoSoltarBoton',['../classVelocistaEdu.html#a8a33ff5b30caff9c7a368006ea9dcd38',1,'VelocistaEdu']]],
-  ['establecervelocidad',['establecerVelocidad',['../classVelocistaEdu.html#a310d6308d71269f0ab368df057bed863',1,'VelocistaEdu']]],
-  ['estadoencoderderecho',['estadoEncoderDerecho',['../classVelocistaEdu.html#a48796ee6f8f1c128ab01590b1bce3b15',1,'VelocistaEdu']]],
-  ['estadoencoderizquierdo',['estadoEncoderIzquierdo',['../classVelocistaEdu.html#a729e902ea3de6fefc0dcade05ffbadd2',1,'VelocistaEdu']]]
+  ['obtenercuentaencoders',['obtenerCuentaEncoders',['../classVelocistaEdu.html#afe3b22295bb3fc33fdb85f4259538ad9',1,'VelocistaEdu']]],
+  ['obtenermedidalinea',['obtenerMedidaLinea',['../classVelocistaEdu.html#add507094d7f7e89364153e2bf3344da4',1,'VelocistaEdu']]],
+  ['obtenerrobot',['obtenerRobot',['../classVelocistaEdu.html#a81e1b64a9626e5299e01220234c188d6',1,'VelocistaEdu']]],
+  ['obtenersensoreslinea',['obtenerSensoresLinea',['../classVelocistaEdu.html#aa5f44fb6e9fb52ce2ebc6d6de95b98af',1,'VelocistaEdu']]],
+  ['obtenertensionbateria',['obtenerTensionBateria',['../classVelocistaEdu.html#ae69aaeb74d93e888cef2f2b677b686c5',1,'VelocistaEdu']]]
 ];

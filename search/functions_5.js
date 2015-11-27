@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resetearcuentaencoders',['resetearCuentaEncoders',['../classVelocistaEdu.html#a61d5fd4eafd7353e0de1cc404e52287e',1,'VelocistaEdu']]]
+  ['velocistaedu',['VelocistaEdu',['../classVelocistaEdu.html#a1b3d54ba7557f3975581061ed9ed801a',1,'VelocistaEdu']]]
 ];

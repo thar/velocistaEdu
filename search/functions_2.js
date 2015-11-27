@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['encenderled',['encenderLed',['../classVelocistaEdu.html#a7b51e9c36a2f5d57e763904b38c79e3d',1,'VelocistaEdu']]],
-  ['establecervelocidad',['establecerVelocidad',['../classVelocistaEdu.html#a310d6308d71269f0ab368df057bed863',1,'VelocistaEdu']]]
+  ['encenderled',['encenderLed',['../classVelocistaEdu.html#ad81b4b75b7964f60436990546e5b8674',1,'VelocistaEdu']]],
+  ['establecervelocidad',['establecerVelocidad',['../classVelocistaEdu.html#a968ff44ba51749f610754c66d586be5f',1,'VelocistaEdu']]]
 ];
