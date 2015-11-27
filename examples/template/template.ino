@@ -5,13 +5,10 @@ VelocistaEdu robot = obtenerRobot();
 
 void setup()
 {
-  Serial.begin(115200);
+  /* Descomentar para usar puerto serie */
+  //Serial.begin(115200);
 }
 
 void loop()
 {
-  if (robot.botonLiberado())
-  {
-    Serial.println("boton liberado");
-  }
 }

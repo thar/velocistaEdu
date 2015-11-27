@@ -1,3 +1,4 @@
+#include <EnableInterrupt.h>
 #include "velocistaEdu.h"
 
 int error = 0;
@@ -13,9 +14,10 @@ int pwmParteDiferencial = 0;
 
 bool estoyEncendido = false;
 
+VelocistaEdu robot = obtenerRobot();
+
 void setup()
 {
-  VelocistaEdu::inicializar();
 }
 
 void loop()
@@ -23,19 +25,18 @@ void loop()
   /* Aun no usamos la cuenta de los encoders */
   /*
   int encoderDerecho, encoderIzquierdo;
-  VelocistaEdu::actualizarEncoders();
-  VelocistaEdu::obtenerCuentaEncoders(encoderIzquierdo, encoderDerecho);
+  robot.obtenerCuentaEncoders(encoderIzquierdo, encoderDerecho);
   */
 
   /* Comprobar boton de encendido */
-  if (VelocistaEdu::botonLiberado())
+  if (robot.botonLiberado())
   {
     estoyEncendido = !estoyEncendido;
   }
 
   /* Obtener el error para el PD */
-  VelocistaEdu::actualizarSensoresLinea();
-  error = VelocistaEdu::obtenerMedidaLinea();
+  robot.actualizarSensoresLinea();
+  error = robot.obtenerMedidaLinea();
 
   /* Ejecutar el algoritmo de PD */
   /*
@@ -52,12 +53,12 @@ void loop()
   /* Establecer velocidad en los motores */
   if (estoyEncendido)
   {
-    VelocistaEdu::establecerVelocidad(pwmParteComun - pwmParteDiferencial, pwmParteComun + pwmParteDiferencial);
+    robot.establecerVelocidad(pwmParteComun - pwmParteDiferencial, pwmParteComun + pwmParteDiferencial);
   }
   /* Si tenemos que estar parados ponemos la velocidad a 0 */
   else
   {
-    VelocistaEdu::establecerVelocidad(0, 0);
+    robot.establecerVelocidad(0, 0);
   }
 }
 

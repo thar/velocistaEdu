@@ -1,10 +1,12 @@
+#define LIBCALL_ENABLEINTERRUPT
 #ifndef velocistaEdu_h
 #define velocistaEdu_h
 
+#include <stdint.h>
 #include "Arduino.h"
-#ifdef USE_INTERRUPT
+
+#define EI_ARDUINO_INTERRUPTED_PIN
 #include "EnableInterrupt.h"
-#endif
 
 /** 
   * enum para definir los pines de los LEDs
@@ -20,147 +22,144 @@ enum LEDS {
 /**
   * Clase de control del velocistaEdu
   * Tiene las funciones basicas para empezar a usar el kit de velocista
-  * No tiene constructor ni destructor porque todos sus miembros son estaticos
+  * El objeto de control solo se puede obtener mediante una llamada a la funcion obtenerRobot
+  * Esto implementa un patron singleton para asegurar que solo hay un objeto de tipo
+  * VelocistaEdu en el programa
   */
 class VelocistaEdu
 {
   public:
-/**
-  * Funcion estatica de inicializacion de los pines usados por el kit
-  */
-    static void inicializar();
+    friend VelocistaEdu & obtenerRobot(const boolean cambiarPolaridadMotorIzquierdo, const boolean cambiarPolaridadMotorDerecho);
+
 
 /**
-  * Funcion estatica que establece pone un pwm en los motores
+  * Funcion que establece pone un pwm en los motores
   * @param[in] velocidadIzquierda PWM para el motor izquierdo
   * @param[in] velocidadDerecha PWM para el motor derecho
   */
-    static void establecerVelocidad(int velocidadIzquierda, int velocidadDerecha);
+    void establecerVelocidad(int velocidadIzquierda, int velocidadDerecha) const;
 
 /**
-  * Funcion estatica que comprueba las pulsaciones en el boton del robot
+  * Funcion que comprueba las pulsaciones en el boton del robot
   * @return true cuando se suelta el boton, false en el resto de condiciones
   */
-    static boolean botonLiberado();
+    boolean botonLiberado();
 
 /**
-  * Funcion estatica que actualiza las variables internas que guardan los valores de los sensores infrarrojos
+  * Funcion que actualiza las variables internas que guardan los valores de los sensores infrarrojos
   * @see obtenerMedidaLinea()
   * @see obtenerSensoresLinea()
   */
-    static void actualizarSensoresLinea();
+    void actualizarSensoresLinea();
 
 /**
-  * funcion estatica que devuelve la posicion de la linea detectada
+  * funcion que devuelve la posicion de la linea detectada
   * Cuando la linea se deja de detectar devuelve el ultimo valor bueno conocido
   * Es necesario haber llamado a la funcion actualizarSensoresLinea() para usar los valores de los sensores mas actuales
   * @see actualizarSensoresLinea()
   * @see obtenerSensoresLinea()
   * @return La posicion de la linea entre -30 y 30 (aproximadamente)
   */
-    static int obtenerMedidaLinea();
+    int obtenerMedidaLinea() const;
 
 /**
-  * Funcion estatica que guarda en un array los ultimos valores conocidos de los sensores inrarojos
+  * Funcion que guarda en un array los ultimos valores conocidos de los sensores inrarojos
   * Es necesario haber llamado a la funcion actualizarSensoresLinea() para usar los valores de los sensores mas actuales
   * @see actualizarSensoresLinea()
   * @see obtenerMedidaLinea()
   * @param[out] s array donde se guardaran los valores de los sensores
   */
-    static void obtenerSensoresLinea(unsigned int s[4]);
+    void obtenerSensoresLinea(unsigned int s[4]) const;
 
-#ifdef USE_INTERRUPT
-/**
-  * Funcion estatica que aumenta la cuenta del encoder derecho
-  * Se usa en el modo de cuenta de encoders por interrupcion
-  * @see obtenerCuentaEncoders()
-  * @see resetearCuentaEncoders()
-  * @see aumentarCuentaIzquierda()
-  */
-    static void aumentarCuentaDerecha();
 
 /**
-  * Funcion estatica que aumenta la cuenta del encoder izquierdo
-  * Se usa en el modo de cuenta de encoders por interrupcion
-  * @see obtenerCuentaEncoders()
-  * @see resetearCuentaEncoders()
-  * @see aumentarCuentaDerecha()
-  */
-    static void aumentarCuentaIzquierda();
-
-#else
-/**
-  * Funcion estatica que comprueba si las ruedas se han movido y actualiza el valor de la cuenta de los encoder
-  * Esta funcion se tiene que llamar de forma periodica y con la mayor frecuencia posible para estar seguros de que contamos todos los pulsos
-  * @see obtenerCuentaEncoders()
-  * @see resetearCuentaEncoders()
-  */
-    static void actualizarEncoders();
-#endif
-
-/**
-  * Funcion estatica que permite obtener la cuenta interna de los encoders
-  * @see actualizarEncoders()
+  * Funcion que permite obtener la cuenta interna de los encoders
   * @see resetearCuentaEncoders()
   * @param[out] encoderIzquierdo variable donde se guardara la cuenta para el encoder de la rueda izquierda
   * @param[out] encoderDerecho variable donde se guardara la cuenta para el encoder de la rueda derecha
   */
-    static void obtenerCuentaEncoders(int &encoderIzquierdo, int &encoderDerecho);
+    void obtenerCuentaEncoders(int &encoderIzquierdo, int &encoderDerecho) const;
 
 /**
-  * Funcion estatica que pone la cuenta de los encoder a 0
-  * @see actualizarEncoders()
+  * Funcion que pone la cuenta de los encoder a 0
   * @see obtenerCuentaEncoders()
   */
-    static void resetearCuentaEncoders();
+    void resetearCuentaEncoders() const;
 
 /**
-  * funcion estatica que devuelve la tension de la bateria
+  * funcion que devuelve la tension de la bateria
   * @return La tension de la bateria en mV
   */
-    static unsigned int obtenerTensionBateria();
+    unsigned int obtenerTensionBateria() const;
 
 /**
-  * Funcion estatica que enciende un LED
+  * Funcion que enciende un LED
   * @param[in] led el led que se quiere encender
   */
-    static void encenderLed(LEDS led);
+    void encenderLed(const LEDS led) const;
 
 /**
-  * Funcion estatica que apaga un LED
+  * Funcion que apaga un LED
   * @param[in] led el led que se quiere apagar
   */
-    static void apagarLed(LEDS led);
+    void apagarLed(const LEDS led) const;
+
+/**
+  * Funcion que apaga un LED
+  * @param[in] led el led que se quiere apagar
+  */
+    void reproducirNota(unsigned int nota, unsigned int duracion) const;
+   
 
 
   protected:
-#ifndef USE_INTERRUPT
-    static boolean estadoEncoderDerecho; //!< Guarda el ultimo estado conocido del pin del encoder derecho
-    static boolean estadoEncoderIzquierdo; //!< Guarda el ultimo estado conocido del pin del encoder izquierdo
-#endif
-    static unsigned int cuentaEncoderDerecho; //!< Guarda la cuenta del encoder derecho
-    static unsigned int cuentaEncoderIzquierdo; //!< Guarda la cuenta del encoder izquierdo
-    static boolean esperandoSoltarBoton; //!< Permite controlar el momento en el que se libera el boton
-    static unsigned int s[4]; //!< Guarda el valor de los sensores infrarrojos
+/**
+  * Constructor que inicializa los pines usados por el kit
+  * Es privado, con lo que solo se pueden crear objetos de la clase VelocistaEdu haciendo uso de la
+  * funcion amiga obtenerRobot
+  * @see obtenerRobot()
+  * @param[in] cambiarPolaridadMotorIzquierdo, cambia la polaridad del motor izquierdo
+  * @param[in] cambiarPolaridadMotorDerecho, cambia la polaridad del motor derecho
+  */
+    VelocistaEdu(const boolean cambiarPolaridadMotorIzquierdo=false, const boolean cambiarPolaridadMotorDerecho=false);
+
+    boolean esperandoSoltarBoton_; //!< Permite controlar el momento en el que se libera el boton
+    unsigned int s_[4]; //!< Guarda el valor de los sensores infrarrojos
+    const bool motorIzquierdoAvanza_;
+    const bool motorDerechoAvanza_;
 
   private:
-    static const uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN, BUZZ;
+    static const uint8_t BOTON, M_IZQ_PWM_PIN, M_IZQ_DIR_PIN, M_DER_DIR_PIN, M_DER_PWM_PIN, ENC_IZQ_PIN, ENC_DER_PIN, BUZZ, PULSOS_POR_REVOLUCION;
+
 };
 
-inline void VelocistaEdu::encenderLed(LEDS led)
+/**
+  * Funcion amiga de la clase VelocistaEdu. Esto permite que pueda acceder a los miembros y metodos privados
+  * De esta forma esta funcion es capaz de crear un objeto de tipo VelocistaEdu, pues el constructor es privado
+  * @param[in] cambiarPolaridadMotorIzquierdo, cambia la polaridad del motor izquierdo. Solo funiona la primera vez que es llada la funcion
+  * @param[in] cambiarPolaridadMotorDerecho, cambia la polaridad del motor derecho. Solo funiona la primera vez que es llada la funcion
+  */
+VelocistaEdu & obtenerRobot(const boolean cambiarPolaridadMotorIzquierdo = false, const boolean cambiarPolaridadMotorDerecho = false);
+
+inline void VelocistaEdu::obtenerSensoresLinea(unsigned int s[4]) const
+{
+  memcpy(s, VelocistaEdu::s_, 4 * sizeof(unsigned int));
+}
+
+inline void VelocistaEdu::encenderLed(const LEDS led) const
 {
   digitalWrite(led, HIGH);
 }
 
-inline void VelocistaEdu::apagarLed(LEDS led)
+inline void VelocistaEdu::apagarLed(const LEDS led) const
 {
   digitalWrite(led, LOW);
 }
 
-inline void VelocistaEdu::obtenerSensoresLinea(unsigned int s[4])
+inline void VelocistaEdu::reproducirNota(unsigned int nota, unsigned int duracion) const
 {
-  memcpy(s, VelocistaEdu::s, 4 * sizeof(unsigned int));
+  tone(VelocistaEdu::BUZZ, nota, duracion);
+  delay(duracion + 2);
 }
 
-
-#endif
+#endif //velocistaEdu_h

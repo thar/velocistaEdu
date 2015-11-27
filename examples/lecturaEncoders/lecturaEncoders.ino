@@ -1,23 +1,17 @@
-#define USE_INTERRUPT
+#include <EnableInterrupt.h>
 #include "velocistaEdu.h"
+
+VelocistaEdu robot = obtenerRobot();
 
 void setup()
 {
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
-  VelocistaEdu::inicializar();
+  Serial.begin(115200);
 }
 
 void loop()
 {
   int encoderDerecho, encoderIzquierdo;
-#ifndef USE_INTERRUPT
-  VelocistaEdu::actualizarEncoders();
-#endif
-  VelocistaEdu::obtenerCuentaEncoders(encoderIzquierdo, encoderDerecho);
+  robot.obtenerCuentaEncoders(encoderIzquierdo, encoderDerecho);
   Serial.print(encoderIzquierdo);
   Serial.print(" ");
   Serial.println(encoderDerecho);

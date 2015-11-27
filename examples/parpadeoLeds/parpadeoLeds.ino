@@ -1,16 +1,18 @@
+#include <EnableInterrupt.h>
 #include "velocistaEdu.h"
+
+VelocistaEdu robot = obtenerRobot();
 
 void setup()
 {
-  VelocistaEdu::inicializar();
 }
 
 void loop()
 {
-  VelocistaEdu::encenderLed(ROJO);
-  VelocistaEdu::apagarLed(VERDE);
+  robot.encenderLed(ROJO);
+  robot.apagarLed(VERDE);
   delay(500);
-  VelocistaEdu::encenderLed(VERDE);
-  VelocistaEdu::apagarLed(ROJO);
+  robot.encenderLed(VERDE);
+  robot.apagarLed(ROJO);
   delay(500);
 }

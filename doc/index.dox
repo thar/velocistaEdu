@@ -4,8 +4,8 @@
  *
  * El kit de velocistaEdu es un kit desarrollado por Vicent Colomar y Andreu Marsal para falicitar el acceso a los componentes necesarios para montar un robot siguelineas
  * a cualquier persona interesada en construir su primer robot siguelineas competitivo.
- * El kit incluye un shield para una placa Arduino Nano con el driver de motores, dos leds y un buzzer y los pines necesarios para conectar 4 sensores de infrarrojos, un pin de encoder por motor
- * y los pines de I2C y puerto serie expuestos.
+ * El kit incluye un shield para una placa Arduino Nano con el driver de motores, dos leds y un buzzer. Tambien tiene expuestos los pines necesarios para conectar 4 sensores de infrarrojos,
+ * un pin de encoder por motor y los pines de I2C y puerto serie expuestos.
  * El kit tambien incluye la placa para montar los sensores infrarrojos que detectarán la linea del suelo y las placas para añadir el encoder a los motores.
  *
  * Con esta configuración se pretende que el robot sea de un facil montaje y sencillo de programar, pero que tenga la posibilidad de hacer desarrollos más complejos segun se va avanzando en el
@@ -22,10 +22,9 @@
  * Copiar la carpeta completa del proyecto en la carpeta de librerías que crea Arduino.
  * Si el espacio en el disco donde se tiene que copiar la librería es muy escaso se pueden eliminar las carpetas "examples", "doc" y ".git"
  *
- * La libreria puede hacer uso de interrupciones para actualizar la cuenta de encoders. Para usarla de este modo es necesario añadir la librería "EnableInterrupt" a la instalación de Arduino.
+ * La libreria hace uso de interrupciones para actualizar la cuenta de encoders. Por ello es necesario añadir la librería "EnableInterrupt" a la instalación de Arduino.
  * La librería se puede encontrar en la siguiente dirección:
  * https://github.com/GreyGnome/EnableInterrupt
- * Para usar el velocistaEdu en este modo ver el ejemplo de lectura de encoders
  *
  * \section examples Ejemplos
  *
@@ -33,12 +32,12 @@
  * Los ejemplos disponibles ahora mismo son:
  *   -  lecturaBoton: Muestra un mensaje por el puerto serie cada vez que se suelta el botón de la placa principal del kit
  *   -  lecturaEncoders: Muestra por el puerto serie la cuenta de los encoders. Según se muevan las ruedas la cuenta debería incrementarse. Siempre contará hacia arriba,
- *         ya que el encoder en cuadratura no está disponible.
- *         es posible usar el modo de interrupcion para llevar la cuenta de los encoders. Para activarlo o desactivarlo hay que descomentar o comentar la línea
- *         #define USE_INTERRUPT
+ *       ya que el encoder en cuadratura no está disponible.
  *   -  lecturaLeds: Muestra por el puerto serie la lectura analógica de los sensores infrarrojos
- *   -  parpadeoLeds: Hace que los leds de la placa del kit parpadeen. Solo uno deberia estar encendido en cada momento
- *   -  siguelineas: Implementación de un control PD para seguir una linea negra sobre un fondo blanco. Los paramentros del PD no están optimizados
  *   -  movimientoRuedas: Testea el movimiento correcto de las ruedas. Permite saber si hay que usar una polaridad u otra en cada motor.
+ *   -  parpadeoLeds: Hace que los leds de la placa del kit parpadeen. Solo uno deberia estar encendido en cada momento
+ *   -  reproducirCancion: Hace que uso del buzzer del robot para reproducir el tema "La Marcha Imperial"
+ *   -  siguelineas: Implementación de un control PD para seguir una linea negra sobre un fondo blanco. Los paramentros del PD no están optimizados
+ *   -  template: Plantilla de ejemplo para empezar a montar tu programa haciendo uso de la librería
  *
  */

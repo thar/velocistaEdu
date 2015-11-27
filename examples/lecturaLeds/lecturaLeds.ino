@@ -1,26 +1,20 @@
+#include <EnableInterrupt.h>
 #include "velocistaEdu.h"
+
+VelocistaEdu robot = obtenerRobot();
 
 void setup()
 {
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
-  VelocistaEdu::inicializar();
+  Serial.begin(115200);
 }
 
 void loop()
 {
   unsigned int s[4];
-  VelocistaEdu::actualizarSensoresLinea();
-  VelocistaEdu::obtenerSensoresLinea(s);
-  Serial.print(s[0]);
-  Serial.print(" ");
-  Serial.print(s[1]);
-  Serial.print(" ");
-  Serial.print(s[2]);
-  Serial.print(" ");
-  Serial.println(s[3]);
+  robot.actualizarSensoresLinea();
+  robot.obtenerSensoresLinea(s);
+  char rawDataString[20];
+  sprintf(rawDataString, "%d %d %d %d", s[0], s[1], s[2], s[3]);
+  Serial.println(rawDataString);
   delay(100);
 }
