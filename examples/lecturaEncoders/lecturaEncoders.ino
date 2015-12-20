@@ -10,7 +10,7 @@ void setup()
 
 void loop()
 {
-  int encoderDerecho, encoderIzquierdo;
+  unsigned int encoderDerecho, encoderIzquierdo;
   robot.obtenerCuentaEncoders(encoderIzquierdo, encoderDerecho);
   Serial.print(encoderIzquierdo);
   Serial.print(" ");
